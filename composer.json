@@ -1,0 +1,28 @@
+{
+    "name": "say7ama/mpesa_sdk",
+    "description": "Software Development Kit for mpesa api payments for laravel",
+    "type": "sdk",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Say7ama\\MpesaSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Klayton Massango",
+            "email": "klayton0304massango@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "php": "^7.3|^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Say7ama\\MpesaSdk\\MpesaServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @author Klayton R. Massango <klayton0304massango@gmail.com>
+ * @license http://mit-license.org/
+ * @link https://gitHub.com/Klayton258
+ * @copyright Klayton Massango
+ */
+
+namespace Say7ama\MpesaSdk;
+
+use Illuminate\Support\ServiceProvider;
+
+class MpesaServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        $this->mergeConfigFrom(__DIR__ . '/config/mpesa.php', 'MpesaSdk');
+
+        $this->publishes([
+            __DIR__.'/config/mpesa.php'=>config_path('mpesa.php')
+        ]);
+    }
+
+    public function register()
+    {
+
+    }
+}
