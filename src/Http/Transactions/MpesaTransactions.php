@@ -156,7 +156,7 @@ class MpesaTransactions extends Controller
                 'https://'. $this->api_host .':'.$this->api_port. $this->api_path,
                 [
                     "input_TransactionReference"=> $data['transaction'],
-	                "input_CustomerMSISDN"=> $data['from'],
+	                "input_CustomerMSISDN"=> $data['to'],
 	                "input_Amount"=> $data['amount'],
 	                "input_ThirdPartyReference"=> $data['reference'],
 	                "input_ServiceProviderCode"=> $this->service_provider_code,
