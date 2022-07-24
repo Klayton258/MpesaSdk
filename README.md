@@ -2,6 +2,7 @@
 Software Development Kit for mpesa api payments for laravel
 
 [![Issues](https://img.shields.io/github/issues/Klayton258/MpesaSdk.svg?style=flat-square)](https://github.com/Klayton258/MpesaSdk/issues)
+[![Total Downloads](https://img.shields.io/packagist/dt/say7ama/mpesa_sdk.svg?style=flat-square)](https://packagist.org/packages/say7ama/mpesa_sdk)
 
 ## Installation
 Install using composer:
@@ -70,3 +71,15 @@ $transaction = new MpesaTransactions();
 
     $result = $mpesa->B2BPayment($data);
 ```
+
+
+## Require
+
+- [PHP ^7.3](https://www.php.net/ChangeLog-7.php#7.3.0)
+- [PHP ^8.0](https://www.php.net/ChangeLog-8.php#8.0.0)
+
+## License
+
+This SDK is made available under the MIT License. Please see [License File](https://github.com/Klayton258/MpesaSdk/blob/main/LICENSE) for more information.
+
+
