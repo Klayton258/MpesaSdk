@@ -10,7 +10,7 @@ composer require say7ama/mpesa_sdk
 ```
 ## Usage
 
-1. Use the command to publish the configuration file choose `Say7ama\MpesaSdk\MpesaServiceProvider`.
+1. Use the command to publish the configuration file `Say7ama\MpesaSdk\MpesaServiceProvider`.
 ```bash
 php  artisan vendor:publish
 ```
