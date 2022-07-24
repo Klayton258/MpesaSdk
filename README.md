@@ -10,19 +10,30 @@ composer require say7ama/mpesa_sdk
 ```
 ## Usage
 
-1. Use the command to publish the configuration file `Say7ama\MpesaSdk\MpesaServiceProvider`.
+1. Add `Say7ama\MpesaSdk\MpesaServiceProvider::class` in `config/app.php`.
+
+2. Use the command to publish the configuration file `Say7ama\MpesaSdk\MpesaServiceProvider::class`.
 ```bash
 php  artisan vendor:publish
 ```
 
-2. Open `config/mpesa.php` file and add the require credentials as supplied by M-Pesa Developer Portal.
+3. Open `config/MpesaSdk.php` file and add the require credentials as supplied by M-Pesa Developer Portal.
 
-3. Initiat transactions using:
+4. If laravel not recognize the package configuration run:
+```bash
+php artisan optimize
+```
+
+5. Initiat transactions using:
 
 ```PHP
+use Say7ama\MpesaSdk\Http\Transactions\MpesaTransactions;
+
+
 $transaction = new MpesaTransactions();
+
 ```
-4. Choose the transaction type and pass the require params:
+6. Choose the transaction type and pass the require params:
 
 - Transaction C2B Paymant (Customer to Business):
 ```PHP
