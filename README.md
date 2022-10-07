@@ -10,7 +10,7 @@ Install using composer:
 ```bash
 composer require say7ama/mpesa_sdk
 ```
-## Usage
+## Usage 1
 
 1. Add `Say7ama\MpesaSdk\MpesaServiceProvider::class` in `config/app.php`.
 
