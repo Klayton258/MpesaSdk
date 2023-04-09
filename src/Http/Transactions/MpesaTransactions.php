@@ -33,11 +33,11 @@ class MpesaTransactions extends Controller
      */
     public function __construct()
     {
-        $this->api_host = config('MpesaSdk.api_host');
-        $this->api_key = config('MpesaSdk.api_key');
-        $this->public_key = config('MpesaSdk.public_key');
-        $this->origin = config('MpesaSdk.origin');
-        $this->service_provider_code = config('MpesaSdk.service_provider_code');
+        $this->api_host = config('mpesa.api_host');
+        $this->api_key = config('mpesa.api_key');
+        $this->public_key = config('mpesa.public_key');
+        $this->origin = config('mpesa.origin');
+        $this->service_provider_code = config('mpesa.service_provider_code');
     }
 
     /**
@@ -54,8 +54,8 @@ class MpesaTransactions extends Controller
     {
 
         try {
-            $this->api_port = config('MpesaSdk.c2b_api_port');
-            $this->api_path = config('MpesaSdk.c2b_api_path');
+            $this->api_port = config('mpesa.c2b_api_port');
+            $this->api_path = config('mpesa.c2b_api_path');
 
             $response = Http::timeout(50)->withHeaders([
                 'Content-Type'=>' application/json',
@@ -141,8 +141,8 @@ class MpesaTransactions extends Controller
     public function B2CPayment($data){
 
         try{
-            $this->api_port = config('MpesaSdk.b2c_api_port');
-            $this->api_path = config('MpesaSdk.b2c_api_path');
+            $this->api_port = config('mpesa.b2c_api_port');
+            $this->api_path = config('mpesa.b2c_api_path');
 
             $response = Http::timeout(50)->withHeaders([
                 'Content-Type'=>' application/json',
@@ -231,8 +231,8 @@ class MpesaTransactions extends Controller
 
     public function B2BPayment($data){
         try{
-            $this->api_port = config('MpesaSdk.b2b_api_port');
-            $this->api_path = config('MpesaSdk.b2b_api_path');
+            $this->api_port = config('mpesa.b2b_api_port');
+            $this->api_path = config('mpesa.b2b_api_path');
 
             $response = Http::timeout(50)->withHeaders([
                 'Content-Type'=>' application/json',
