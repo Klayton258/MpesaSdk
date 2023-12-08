@@ -18,7 +18,7 @@ class MpesaServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/config/MpesaSdk.php', 'MpesaSdk');
 
         $this->publishes([
-            __DIR__.'/config/MpesaSdk.php'=>config_path('MpesaSdk.php')
+            __DIR__.'/config/MpesaSdk.php'=>config_path('mpesa.php')
         ]);
     }
 
