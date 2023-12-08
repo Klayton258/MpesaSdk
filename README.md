@@ -32,7 +32,7 @@ php artisan optimize
 use Say7ama\MpesaSdk\Http\Transactions\MpesaTransactions;
 
 
-$transaction = new MpesaTransactions();
+$mpesa = new MpesaTransactions();
 
 ```
 6. Choose the transaction type and pass the require params:
