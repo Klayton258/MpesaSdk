@@ -7,7 +7,7 @@
  * @copyright Klayton Massango
  */
 
-namespace Say7ama\mpesa\Http\Transactions;
+namespace Say7ama\MpesaSdk\Http\Transactions;
 
 use App\Http\Controllers\Controller;
 use Exception;

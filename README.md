@@ -19,7 +19,7 @@ composer require say7ama/mpesa_sdk
 php  artisan vendor:publish
 ```
 
-3. Open `config/MpesaSdk.php` file and add the require credentials as supplied by M-Pesa Developer Portal.
+3. Open `config/mpesa.php` file and add the require credentials as supplied by M-Pesa Developer Portal.
 
 4. If laravel not recognize the package configuration run:
 ```bash
@@ -40,7 +40,7 @@ $mpesa = new MpesaTransactions();
 - Transaction C2B Paymant (Customer to Business):
 ```PHP
     $data =[
-        'from' => $from,                // Customer MSISDN
+        'from' => $from,                // Customer MSISDN with prefix code '258'
         'reference' => $reference,      // Third Party Reference
         'transaction' => $transaction,  // Transaction Reference
         'amount' => $amount             // Amount
@@ -52,7 +52,7 @@ $mpesa = new MpesaTransactions();
 - Transaction B2C Paymant (Business to Customer):
 ```PHP
     $data =[
-        'to' => $from,                // Customer MSISDN
+        'to' => $from,                // Customer MSISDN with prefix code '258'
         'reference' => $reference,      // Third Party Reference
         'transaction' => $transaction,  // Transaction Reference
         'amount' => $amount             // Amount
